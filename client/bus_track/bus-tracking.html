@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Bus Tracking</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Services <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="bus-tracking.html">Real-Time Bus Tracking</a></li>
+          <li><a href="complaints.html">Complaint Box</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="results.html" class="nav-link">Survey Results</a></li>
+      <li class="nav-item">
+        <a href="https://forms.gle/ebzX61TJQVnWzyUYA" target="_blank" class="nav-link"><i class="fas fa-comment-dots"></i> Feedback</a>
+      </li>
+      <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Real-Time Bus Tracking</h1>
+      <p>Select a route to display its path and stops on the map.</p>
+    </div>
+  </header>
+
+  <div class="route-selector">
+    <label for="routeSelect">Choose a route:</label>
+    <select id="routeSelect">
+      <option value="route1">Route 1: RV College to MG Road</option>
+      <option value="route2">Route 2: RV College to Kengeri</option>
+      <option value="route3">Route 3: RV College to Sarjapur</option>
+      <option value="route4">Route 4: Near Jayadeva</option>
+      <option value="route5">Route 5: National College</option>
+    </select>
+  </div>
+
+  <div id="map" style="height: 500px;"></div>
+
+  <footer>
+    <p>&copy; 2024 Public Transport Survey | Real-Time Tracking Prototype.</p>
+  </footer>
+
+  <script src="bus-tracking.js"></script>
+</body>
+</html>

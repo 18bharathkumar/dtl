@@ -1,0 +1,230 @@
+<!-- /index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Public Transport Survey</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #2C3E50;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .nav-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      padding: 10px;
+    }
+
+    .nav-link {
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ff9800;
+    }
+
+    .navbar .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #74a5c3e3;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Hero Section with Image Background */
+    .hero {
+      position: relative;
+      background: url('img1 (3).jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      min-height: 70vh;
+    }
+
+    .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Reduced opacity */
+  backdrop-filter: blur(8px); /* Blur Effect */
+  z-index: 1;
+}
+
+
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+
+    /* Feature Section */
+    .features {
+      padding: 40px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .features-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .feature-item {
+      width: 30%;
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-button {
+      font-size: 3rem;
+      color: #00796b;
+      transition: color 0.3s;
+    }
+
+    .feature-item:hover .feature-button {
+      color: #ff9800;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .features-container {
+        flex-direction: column;
+      }
+
+      .feature-item {
+        width: 80%;
+        margin: 10px 0;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link">Services <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="bus_track/bus-tracking.html">Real-Time Bus Tracking</a></li>
+          <li><a href="complient/complaints.html" target="_blank">Complaint Box</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="results.html" class="nav-link">Survey Results</a></li>
+      <li class="nav-item"><a href="https://forms.gle/ebzX61TJQVnWzyUYA" target="_blank" class="nav-link"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Welcome to the Public Transport Survey</h1>
+      <p>Explore how your feedback is shaping a better public transport system. Find real-time bus tracking, access survey insights, and contribute to making public commuting more efficient and user-friendly.</p>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Our Features</h2>
+    <div class="features-container">
+      <div class="feature-item">
+        <a href="bus_track/bus-tracking.html" class="feature-button"><i class="fas fa-bus"></i></a>
+        <h3>Services</h3>
+        <p>Track buses in real-time and raise your complaint here</p>
+      </div>
+      <div class="feature-item">
+        <a href="results.html" class="feature-button"><i class="fas fa-chart-bar"></i></a>
+        <h3>Survey Results</h3>
+        <p>Analyze key insights and recommendations from survey data.</p>
+      </div>
+      <div class="feature-item">
+        <a href="https://forms.gle/ebzX61TJQVnWzyUYA" target="_blank" class="feature-button"><i class="fas fa-comment-dots"></i></a>
+        <h3>Feedback</h3>
+        <p>Share your feedback to help improve public transport services.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Public Transport Survey | Designed for better commuting.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
